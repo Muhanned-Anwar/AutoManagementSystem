@@ -1,3 +1,6 @@
+import '../bmw.dart';
+import '../car.dart';
+
 extension NonNullString on String? {
   // String name = null; name ?? '' >>
   // >> name.onNull()
@@ -18,6 +21,16 @@ extension NonNullInt on int? {
     if (this == null) {
       return 0;
     } else {
+      return this!;
+    }
+  }
+}
+
+extension NonNullCar on Car?{
+  Car onNull() {
+    if(this == null){
+      return BMW('name', 'description');
+    }else {
       return this!;
     }
   }
