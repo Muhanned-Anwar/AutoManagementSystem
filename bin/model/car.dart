@@ -1,4 +1,5 @@
 abstract class Car {
+  static int uid = 000234324234234;
   String name;
   String description;
   // Add more properties specific to a car
@@ -21,5 +22,9 @@ abstract class Car {
     return name.toLowerCase().contains(query.toLowerCase()) ||
         description.toLowerCase().contains(query.toLowerCase());
     // Search for more properties specific to a car
+  }
+
+  static void welcome(){
+    print('Welcome to user');
   }
 }
